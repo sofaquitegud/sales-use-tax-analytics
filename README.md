@@ -37,7 +37,7 @@ You can view the live interactive dashboard here:
 
 **File:** `tableau/sales_use_tax_dashboard.twb`
 
-[![Tableau Dashboard Preview](images/dashboard_preview.png)
+![Tableau Dashboard Preview](images/dashboard_preview.png)
 
 ---
 
@@ -78,3 +78,10 @@ sales-use-tax-analytics/
 │   └── dashboard_preview.png
 │
 └── README.md
+```
+---
+
+## 👤 Author
+**Syafiq**  
+Analytics Engineer | ETL, Automation & Data Visualization  
+☕ Coffee-fueled curiosity for making complex data simple.
