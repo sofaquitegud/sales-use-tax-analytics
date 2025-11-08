@@ -1,58 +1,62 @@
 # Sales & Use Tax Analytics
 
 This project automates the **Sales and Use Tax calculation process** and visualizes results using **Alteryx Designer** and **Tableau**.  
-It was developed as one of my first workflow projects as an Analytics Engineer to streamline tax reporting, improve accuracy, and enhance audit visibility.
+It was developed during my early weeks as an Analytics Engineer to streamline tax reporting, improve accuracy, and enhance audit visibility.
 
 ---
 
 ## 🚀 Overview
-Manual tax reporting often leads to inconsistent calculations and slow turnaround times.  
-This workflow automates tax computations by applying jurisdiction-based rules and preparing data for visualization in Tableau.
+Manual tax reporting can lead to inconsistencies and slow turnaround times.  
+This project builds an automated workflow to calculate sales and use taxes across states, apply jurisdiction-based rules, and create an interactive Tableau dashboard for better insights.
 
-**Key Goals:**
+**Goals:**
 - Automate Sales and Use Tax calculations
-- Ensure accuracy and compliance with regional tax rules
-- Build dashboards for data-driven reporting
+- Improve data accuracy and compliance
+- Enable interactive visualization for decision-making
 
 ---
 
 ## ⚙️ Workflow (Alteryx)
-- **Input & Preparation:** Imported raw sales data, standardized formats, and validated transaction records.  
-- **Calculation Logic:** Applied regional tax rates and separated Sales Tax from Use Tax.  
-- **Output:** Generated summarized tables by state, product category, and tax type, ready for Tableau visualization.
+- **Input & Preparation:** Combined multiple data sources (sales transactions, state tax rates, and ZIP mappings).  
+- **Calculation Logic:** Applied regional tax rates and distinguished Sales Tax vs. Use Tax based on transaction type.  
+- **Output:** Produced clean, aggregated summaries ready for Tableau visualization.
 
-**File:** `sales_use_tax_calculation.yxmd`
+**File:** `alteryx/sales_use_tax_calculation.yxmd`
 
 ---
 
 ## 📊 Visualization (Tableau)
-The Tableau dashboard provides an interactive view of:
-- **Sales vs. Tax Amounts** by region  
-- **Tax Breakdown by Category**  
-- **KPI Metrics** for compliance and potential audit risks  
+The Tableau dashboard presents:
+- **Total Sales and Tax Amounts** across states  
+- **Category-based tax breakdowns**  
+- **Interactive filters** for exploring data by region or product type  
+- **Key metrics** for compliance and audit tracking  
 
-**File:** `sales_use_tax_dashboard.twb`
+You can view the live interactive dashboard here:  
+👉 [**View on Tableau Public**](https://public.tableau.com/app/profile/your_dashboard_link_here](https://public.tableau.com/views/my-workbook_17599991638810/StateSalesandTaxPerformanceDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 
-*(Optional: Add a screenshot under `/images/dashboard_preview.png` once uploaded)*
+**File:** `tableau/sales_use_tax_dashboard.twb`
+
+[![Tableau Dashboard Preview](images/dashboard_preview.png)
 
 ---
 
-## 💡 Insights
-- Identified states with high Use Tax due to inter-state transactions  
-- Exposed under-reported categories for audit follow-up  
-- Reduced manual tax computation time by ~70%
+## 💡 Key Insights
+- Identified states with higher Use Tax due to inter-state transactions  
+- Highlighted under-reported categories needing audit attention  
+- Reduced manual tax reporting time by approximately **70%**
 
 ---
 
 ## 🧰 Tools & Skills
-- **Alteryx Designer** – ETL automation, data transformation, workflow design  
-- **Tableau** – Visualization, storytelling, interactive dashboards  
-- **Excel / CSV** – Data validation and tax rate references  
+- **Alteryx Designer** – ETL automation, workflow design, data transformation  
+- **Tableau** – Interactive dashboarding and storytelling  
+- **Excel / CSV** – Data validation and lookup reference handling  
 
 ---
 
 ## 📁 Repository Structure
-```
+```plaintext
 sales-use-tax-analytics/
 │
 ├── alteryx/
@@ -62,17 +66,15 @@ sales-use-tax-analytics/
 │   └── sales_use_tax_dashboard.twb
 │
 ├── data/
-│   ├── sample_input.csv          # optional, anonymized or dummy data
-│   └── output_summary.csv        # optional, clean output example
+│   ├── input/
+│   │   ├── state_tax_rates.csv
+│   │   ├── subscription_data.csv
+│   │   └── zip_code_by_state.csv
+│   │
+│   └── output/
+│       └── output_summary.csv
 │
 ├── images/
-│   └── dashboard_preview.png     # optional, screenshot of Tableau dashboard
+│   └── dashboard_preview.png
 │
 └── README.md
-```
----
-
-## 👤 Author
-**Syafiq**  
-Analytics Engineer | ETL, Automation & Data Visualization  
-☕ Coffee-fueled curiosity for making complex data simple.
